@@ -1,29 +1,23 @@
-###
-# set shell variable
-# WORDCHARS=$WORDCHARS:s,/,,
-export LANG=ja_JP.UTF-8
-export JAVA_HOME=/Library/Java/Home
-
+# 履歴の設定
 HISTSIZE=200 HISTFILE=~/.zhistory SAVEHIST=180
 
 # プロンプト表示設定
 setopt prompt_subst
 PROMPT='[%n@%m]{%D %*} %#'
 RPROMPT=$'%{\e[37m%}[%~]%{\e[m%}'
-#RPROMPT='[%d]'
 
 #色分け表示を行う
 autoload colors
 colors
 eval `tset -sQ rxvt-256color`
 
-# emacs binding keys
+# キーバインドを Emacs 風に
 bindkey -e
 
-# ディレクトリ名だけでcd
+# ディレクトリ名だけで cd
 setopt auto_cd
 
-# tab連打で補完候補表示
+# tab 連打で補完候補表示
 setopt auto_menu
 
 # 補完時に日本語を正しく表示
@@ -96,17 +90,21 @@ alias dirs='dirs -v'
 alias lessn='less -N'
 alias opena='open -a Preview'
 alias javac='javac -J-Dfile.encoding=UTF8'
+alias finder='open -a finder'
+alias cl='clear'
 
 alias -s pdf=open
 alias -s dvi=xdvi
 alias -s key=open
-alias -s tex=emacs
 alias -s {tgz,lzh,zip,arc}=open
 alias -s app=open -a
+alias -s jar=java -jar
+
+# Emacs で開く
+alias -s tex=emacs
 alias -s txt=emacs
 alias -s scala=emacs
 alias -s xml=emacs
-alias -s jar=java -jar
 alias -s py=emacs
 
 h () {history $* | less}
