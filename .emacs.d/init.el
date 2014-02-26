@@ -32,11 +32,11 @@
 
 ;ロードパス
 (setq load-path (append
-		 '("~/.emacs.d"
-		   "~/.emacs.d/site-lisp"
+		 '("~/.emacs.d/site-lisp"
 		   "~/.emacs.d/site-lisp/yatex"
 		   "~/.emacs.d/site-lisp/haskell"
-		   "~/.emacs.d/site-lisp/scala-mode")
+		   "~/.emacs.d/site-lisp/scala-mode"
+           "~/.emacs.d/site-lisp/Highlight-Indentation-for-Emacs")
 		 load-path))
 
 ;実行パス
@@ -84,6 +84,9 @@
 ;行末の空白を表示
 (setq-default show-trailing-whitespace t)
 
+;タブでの補完をスペースに
+(setq-default tab-width 4 indent-tabs-mode nil)
+
 ;EOB表示
 (setq-default indicate-empty-lines t)
 (setq-default indicate-buffer-boundaries 'left)
@@ -92,6 +95,30 @@
 ;(if (not window-system)
 ;    (menu-bar-mode -1))
 (menu-bar-mode -1)
+
+; highlight-indentation
+(require 'highlight-indentation)
+(setq highlight-indentation-offset 4)  ;; default: 4
+(set-face-background 'highlight-indentation-face "#e3e3d3")
+(set-face-background 'highlight-indentation-current-column-face "#e3e3d3")
+
+;; highlight-indentation-mode が呼ばれたら highlight-indentation-current-column-mode も実行する
+(add-hook 'highlight-indentation-mode-hook 'highlight-indentation-current-column-mode)
+ 
+;; 各種モードで highlight-indentation-mode が実行されるようにする
+;(add-hook 'Yatex 'highlight-indentation-mode)
+
+; 現在の行をハイライトする
+; vline.el と依存関係あり
+; 常にハイライト
+; (column-highlight-mode 1)
+; 5秒間放置でハイライト
+; (toggle-highlight-column-when-idle 1)
+; (col-highlight-set-interval 6)
+(require 'col-highlight)
+;(column-highlight-mode 1)
+(toggle-highlight-column-when-idle 1)
+(col-highlight-set-interval 6)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                       wb-line-number                             ;;
