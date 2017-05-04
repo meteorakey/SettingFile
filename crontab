@@ -1,0 +1,2 @@
+*/1 * * * * echo "test `date`" >> /Users/tatsuya/test.txt
+*/1 * * * * echo "test"
