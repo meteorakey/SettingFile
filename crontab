@@ -1,7 +1,8 @@
 SHELL=/bin/sh
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share:/usr/local/
 MAILTO="meteor_a_key@yahoo.co.jp"
 
-*/5 * * * * cd /Users/tatsuya/workspace_ruby/nicoliver && sh /Users/tatsuya/workspace_ruby/nicoliver/nicoliver.sh
+* 23 * * * cd /Users/tatsuya/workspace_ruby/nicoliver && sh /Users/tatsuya/workspace_ruby/nicoliver/nicoliver.sh
 
-* 22 * * * sh /Users/tatsuya/dev/update_brew.sh
+* 22 * * * brew update && brew upgrade && brew doctor
+
+
