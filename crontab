@@ -1,2 +1,6 @@
-*/1 * * * * echo "test `date`" >> /Users/tatsuya/test.txt
-*/1 * * * * echo "test"
+MAILTO="meteor_a_key@yahoo.co.jp"
+
+*/5 * * * * echo "`date`"
+
+*/30 * * * * /Users/tatsuya/workspace_ruby/nicoliver
+
