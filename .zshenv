@@ -4,12 +4,11 @@ export LANG=ja_JP.UTF-8
 # Homebrew用path
 export PATH=/usr/local/bin:$PATH:/usr/sbin:/sbin:/usr/local/share
 
-# TeXLive用PATH指定
-export PATH=$PATH:/usr/local/texlive/2012/bin/x86_64-darwin
-
 # path for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH=$PYENV_ROOT/bin:$PATH
+export XDG_CONFIG_HOME=~/.config
+
 # initilize for pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"

@@ -66,14 +66,6 @@ zstyle ':completion:*:options' description 'yes'
 zstyle ':completion:*' group-name ''
 #zstyle 'completion:*:complete:-command-::' group-order current_dir_files command local-directories users named-directories path-directories
 
-
-##############################
-#             ssh            #
-##############################
-agusa_ssh() {
-    ssh -p 22222 -D 9999 toda@chanko.agusa.i.is.nagoya-u.ac.jp
-}
-
 ##############################
 #           ruby             #
 ##############################
@@ -112,20 +104,5 @@ alias opena='open -a Preview'
 alias javac='javac -J-Dfile.encoding=UTF8'
 alias finder='open -a finder'
 alias cl='clear'
+alias vim=nvim
 
-alias -s pdf=open
-alias -s dvi=xdvi
-alias -s key=open
-alias -s {tgz,lzh,zip,arc}=open
-alias -s app=open -a
-alias -s jar=java -jar
-
-# Emacs で開く
-alias -s tex=emacs
-alias -s txt=emacs
-alias -s scala=emacs
-alias -s xml=emacs
-alias -s py=emacs
-
-h () {history $* | less}
-mdcd () {mkdir -p "$@" && cd "$*[-1]"}

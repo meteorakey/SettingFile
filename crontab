@@ -1,8 +1,0 @@
-SHELL=/bin/sh
-MAILTO="meteor_a_key@yahoo.co.jp"
-
-* 23 * * * cd /Users/tatsuya/workspace_ruby/nicoliver && sh /Users/tatsuya/workspace_ruby/nicoliver/nicoliver.sh
-
-* 22 * * * brew update && brew upgrade && brew doctor
-
-
