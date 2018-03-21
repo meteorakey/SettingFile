@@ -106,3 +106,6 @@ alias finder='open -a finder'
 alias cl='clear'
 alias vim=nvim
 
+# for brew doctor 
+alias brew="env PATH=${PATH/\/Users\/tatsuya\/\.pyenv\/shims:/} brew"
+

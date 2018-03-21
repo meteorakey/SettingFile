@@ -16,13 +16,12 @@ eval "$(pyenv virtualenv-init -)"
 # man pathの指定
 manpath=(/usr/*/man(N-/) /usr/local/*/man(N-/) /var/*/man(N-/))
 export MANPATH
-
 typeset -U path manpath
 
-# javaのpath
+# JAVA HOME
 export JAVA_HOME=/Library/Java/Home
 
-# Goのpath
+# Go Path
 export GOPATH=$HOME/dev/go_workspace
 
 # リモートから起動するコマンド用の環境変数
@@ -34,3 +33,4 @@ export JLESSCHARSET=japanese
 
 # コアダンプファイルを作成しない
 limit coredumpsize 0
+
