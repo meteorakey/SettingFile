@@ -107,5 +107,5 @@ alias cl='clear'
 alias vim=nvim
 
 # for brew doctor 
-alias brew="env PATH=${PATH/\/Users\/tatsuya\/\.pyenv\/shims:/} brew"
+alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
 

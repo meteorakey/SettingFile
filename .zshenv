@@ -2,7 +2,7 @@
 export LANG=ja_JP.UTF-8
 
 # Homebrew用path
-export PATH=/usr/local/bin:$PATH:/usr/sbin:/sbin:/usr/local/share
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share:/usr/bin:/usr/sbin:/bin:/sbin
 
 # path for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
