@@ -90,22 +90,10 @@ function bundle(){
 ##############################
 #           alias            #
 ##############################
-alias copy='cp -ip'
-alias del='rm -i'
-alias move='mv -i'
-alias fullreset='echo "\ec\ec"'
 alias ja='LANG=ja_JP.ecuJP XMODIFIERS=@im=kinput2'
 alias ls='ls -F' la='ls -a' ll='ls -la'
-alias pu=pushd
-alias po=popd
-alias dirs='dirs -v'
-alias lessn='less -N'
-alias opena='open -a Preview'
 alias javac='javac -J-Dfile.encoding=UTF8'
 alias finder='open -a finder'
-alias cl='clear'
 alias vim=nvim
-
-# for brew doctor 
 alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
 
