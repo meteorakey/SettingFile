@@ -1,0 +1,17 @@
+*
+
+# ZSH
+!.zlogin
+!.zshenv
+!.zshrc
+
+# emacs
+!.emacs.d/
+!.emacs.d/init.el
+
+# vim
+!.vimrc
+
+# git
+!.gitignore
+
